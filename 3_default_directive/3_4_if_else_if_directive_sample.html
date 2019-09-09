@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello World!</title>
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <div>
+          귤과 사과 그리고 바나나 중 어떤 과일을 좋아하는지 입력해주세요?
+        </div>
+
+        <input v-model="result" placeholder="귤과 사과, 바나나 중 하나를 입력해주세요" style="width: 400px;"/>
+        <br /><br />
+
+        <div id="image_area">
+          <!-- 사과 -->
+          <img src="https://raw.githubusercontent.com/esperancer/tz_1909_vue_study/master/week1/study_guide_image/img_apple.jpg" />
+          <!-- 귤 -->
+          <img src="https://raw.githubusercontent.com/esperancer/tz_1909_vue_study/master/week1/study_guide_image/img_tangerine.jpg" />
+          <!-- 바나나 -->
+          <img src="https://raw.githubusercontent.com/esperancer/tz_1909_vue_study/master/week1/study_guide_image/img_banana.jpg" />
+
+        </div>
+      </div>
+
+    </div>
+    <script type="text/javascript">
+      var model = {
+        result : ""
+      }
+
+      var vm = new Vue({
+        el : "#app",
+        data : model
+      });
+    </script>
+  </body>
+</html>
