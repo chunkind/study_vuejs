@@ -48,6 +48,12 @@
       - [(1)문제](#1문제)
       - [(2)정답](#2정답)
   - [5.iterated directive](#5iterated-directive)
+    - [1)array](#1array)
+      - [(1) 문제](#1-문제-4)
+      - [(2) 정답](#2-정답-4)
+    - [2)object](#2object)
+      - [(1) 문제](#1-문제-5)
+      - [(2) 정답](#2-정답-5)
 
 <!-- /code_chunk_output -->
 ---
@@ -262,3 +268,17 @@ v-show => 렌더링은 하되, display none 시켜버림(화면에만 안보이�
 
 ---
 ## 5.iterated directive
+### 1)array
+#### (1) 문제
+>https://github.com/chunkind/study_vuejs/blob/master/4_iterated_directive/4_1_iterate_directive_for_array_sample.html
+#### (2) 정답
+>https://github.com/chunkind/study_vuejs/blob/master/4_iterated_directive/4_1_iterate_directive_for_array_completed.html
+### 2)object
+#### (1) 문제
+>https://github.com/chunkind/study_vuejs/blob/master/4_iterated_directive/4_2_iterate_directive_for_object_sample.html
+#### (2) 정답
+>https://github.com/chunkind/study_vuejs/blob/master/4_iterated_directive/4_2_iterate_directive_for_object_completed.html
+### 3)array
+>https://github.com/chunkind/study_vuejs/blob/master/4_iterated_directive/4_3_iterate_directive_for_array_completed.html
+### 4)object
+>https://github.com/chunkind/study_vuejs/blob/master/4_iterated_directive/4_4_iterate_directive_for_object_completed.html
