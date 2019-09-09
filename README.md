@@ -4,7 +4,7 @@
 <!-- code_chunk_output -->
 
 - [Vue.js Study](#vuejs-study)
-  - [1.사전준비](#1사전준비)
+  - [0.사전준비](#0사전준비)
     - [1) NPM 이란?](#1-npm-이란)
       - [(1) 버전확인(cmd에서)](#1-버전확인cmd에서)
       - [(2) 설치](#2-설치)
@@ -15,13 +15,21 @@
       - [(1) 설치](#1-설치)
       - [(2) 유용한 플러그인](#2-유용한-플러그인)
           - [(참고) Setting 메뉴 단축키 `Ctrl + ,(콤마)`](#참고-setting-메뉴-단축키-ctrl-콤마)
-  - [2.개요](#2개요)
-    - [1) Vue 개요](#1-vue-개요)
+    - [4) 개요](#4-개요)
       - [(1) Vue의 구조](#1-vue의-구조)
+      - [(2) Vue의 장점](#2-vue의-장점)
+      - [(3) Vue의 단점](#3-vue의-단점)
+      - [(4) Vue와 JQuery의 사용](#4-vue와-jquery의-사용)
+  - [3.기본 템플릿](#3기본-템플릿)
+    - [1) 직접 script에 추가](#1-직접-script에-추가)
+    - [2) 템플릿 작성(CDN)](#2-템플릿-작성cdn)
+  - [3. Hello, world](#3-hello-world)
+    - [1) jquery로 Hello, world 어플리케이션](#1-jquery로-hello-world-어플리케이션)
+    - [2) vue.js로 변환하기](#2-vuejs로-변환하기)
 
 <!-- /code_chunk_output -->
 ---
-## 1.사전준비
+## 0.사전준비
 ### 1) NPM 이란?
 >Node Package Module의 약자로 Node.js에서 사용 가능한 모듈을 패키지화 하여 모아놓은 것. 프론트 쪽 프로잭트 할때 대부분의 모듈은 node.js의 모듈 패키지인 npm을 사용 하는 듯 하다.
 #### (1) 버전확인(cmd에서)
@@ -75,14 +83,13 @@ A. Settings > Install > 상단 Install Themes에서 Packages로 모드를 변경
   * javascript-snippets
   * platformio-ide-terminal
 
----
-## 2.개요
 
-### 1) Vue 개요
-
+### 4) 개요
 #### (1) Vue의 구조
 
-```(참고 이미지) Vue MVVM 개요 ```
+```
+(참고 이미지) Vue MVVM 개요
+```
 ![Vue MVVM](./imgs/01_mvvm.png)
 
 #### (2) Vue의 장점
@@ -107,21 +114,31 @@ A. 구글의 Angular, 페이스북의 React에 비해 후발주자이기 때문�
 
 B. 나머지 두 라이브러리는 강력한 인지도를 바탕으로 하는 큰 회사들의 지원이 존재하지만, Vue는 오픈소스 커뮤니티 기반으로 운영되고 있다. 빠른 속도로 Vue가 성장 중인 것은 맞지만 장기적이고 파워풀한 지원 면에서는 뒷심이 부족할 수 있다.
 
-```(참고문서) Vue.js가 주목받는 이유```
-https://medium.com/@jeongwooahn/vue-js-%EA%B0%80-%EC%A3%BC%EB%AA%A9%EB%B0%9B%EB%8A%94-%EC%9D%B4%EC%9C%A0-bec3db5a1e7d
-```(참고문서) React인가 Vue인가?```
-https://joshua1988.github.io/web_dev/vue-or-react/
+```
+(참고문서) Vue.js가 주목받는 이유
+```
+> https://medium.com/@jeongwooahn/vue-js-%EA%B0%80-%EC%A3%BC%EB%AA%A9%EB%B0%9B%EB%8A%94-%EC%9D%B4%EC%9C%A0-bec3db5a1e7d
+```
+(참고문서) React인가 Vue인가?
+```
+> https://joshua1988.github.io/web_dev/vue-or-react/
 
 #### (4) Vue와 JQuery의 사용
 A. 여러가지 면에서 차이가 있지만, 가장 두드러지는 차이점은 Vue는 화면 요소를 제어할 때 가상의 DOM을 조작한 후 그것을 실제 DOM에 반영하는 반면, JQuery는 실제 DOM을 직접적으로 조작한다는 점이다. **이로 인해 JQuery를 통해 화면 요소에 변경을 가할 경우 Vue에서는 관측되지 않아 변경사항이 반영되지 않는다.** Vue는 MVVM 모델에 따라 가상 DOM의 데이터를 관측하여 변경사항을 화면에 반영한다.
 
 ---
-## 3.기본 템플릿
+## 1.기본 템플릿
 ### 1) 직접 script에 추가
-https://kr.vuejs.org/v2/guide/installation.html#%EC%A7%81%EC%A0%91-lt-script-gt-%EC%97%90-%EC%B6%94%EA%B0%80
+> https://kr.vuejs.org/v2/guide/installation.html#%EC%A7%81%EC%A0%91-lt-script-gt-%EC%97%90-%EC%B6%94%EA%B0%80
 ### 2) 템플릿 작성(CDN)
-https://github.com/chunkind/study_vuejs/blob/master/0_template/0_1_default_template.html
+> https://github.com/chunkind/study_vuejs/blob/master/0_template/0_1_default_template.html
 
 ---
-## 3. Hello, world
+## 2. Hello, world
 ### 1) jquery로 Hello, world 어플리케이션
+> https://github.com/chunkind/study_vuejs/blob/master/1_hello_world/1_0_hello_world_jquery_completed.html
+### 2) vue.js로 변환하기
+```
+아래 링크 파일을 받아 vue.js로 변환 하기.
+```
+>
