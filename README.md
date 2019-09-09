@@ -11,7 +11,8 @@
     - [2) CLI 란?](#2-cli-란)
       - [(1) cmd에서 글로벌 설치 명령어 수행](#1-cmd에서-글로벌-설치-명령어-수행)
       - [(2) 글로벌 설치 여부 확인](#2-글로벌-설치-여부-확인)
-    - [3) Atom 설치](#3-atom-설치)
+    - [3) SFC](#3-sfc)
+    - [4) Atom 설치](#4-atom-설치)
       - [(1) 설치](#1-설치)
       - [(2) 유용한 플러그인](#2-유용한-플러그인)
           - [(참고) Setting 메뉴 단축키 `Ctrl + ,(콤마)`](#참고-setting-메뉴-단축키-ctrl-콤마)
@@ -29,31 +30,32 @@
     - [3) 정답](#3-정답)
   - [3.life cycle](#3life-cycle)
     - [1) 라이프 사이클의 순서 및 종류](#1-라이프-사이클의-순서-및-종류)
-    - [2) 문제](#2-문제-1)
-    - [3) 정답](#3-정답-1)
-  - [4.기본 지시자(directive)](#4기본-지시자directive)
-    - [1) v-text, v-html](#1-v-text-v-html)
+    - [2) 관련 예제](#2-관련-예제)
       - [(1) 문제](#1-문제)
       - [(2) 정답](#2-정답)
-    - [2) bind](#2-bind)
+  - [4.기본 지시자(directive)](#4기본-지시자directive)
+    - [1) v-text, v-html](#1-v-text-v-html)
       - [(1) 문제](#1-문제-1)
       - [(2) 정답](#2-정답-1)
-    - [3) 양방향 바인딩 지시자](#3-양방향-바인딩-지시자)
+    - [2) bind](#2-bind)
       - [(1) 문제](#1-문제-2)
       - [(2) 정답](#2-정답-2)
-    - [4) if, else if, else](#4-if-else-if-else)
+    - [3) 양방향 바인딩 지시자](#3-양방향-바인딩-지시자)
       - [(1) 문제](#1-문제-3)
       - [(2) 정답](#2-정답-3)
+    - [4) if, else if, else](#4-if-else-if-else)
+      - [(1) 문제](#1-문제-4)
+      - [(2) 정답](#2-정답-4)
     - [5) show](#5-show)
       - [(1)문제](#1문제)
       - [(2)정답](#2정답)
   - [5.iterated directive](#5iterated-directive)
     - [1)array](#1array)
-      - [(1) 문제](#1-문제-4)
-      - [(2) 정답](#2-정답-4)
-    - [2)object](#2object)
       - [(1) 문제](#1-문제-5)
       - [(2) 정답](#2-정답-5)
+    - [2)object](#2object)
+      - [(1) 문제](#1-문제-6)
+      - [(2) 정답](#2-정답-6)
     - [3)array](#3array)
     - [4)object](#4object)
 
@@ -69,8 +71,7 @@ C:\Users\ck>npm --version
 https://nodejs.org/ko/
 
 ### 2) CLI 란?
->Command Line Interface의 약자로 윈도우의 cmd나 맥의 터미털등의 프로그램에서 실행 가능하게 하는 프로그램을 말한다.
-
+>Command Line Interface의 약자로 윈도우의 cmd나 맥의 터미털등의 프로그램에서 실행 가능하게 하는 프로그램을 말한다. Vue-CLI 3란 vue.js 개발을 위한 커맨드 라인 시스템으로 vue.js core에서 공식으로 제공하는 CLI이다. 애플리케이션 개발에 집중 할 수 있도록 프로젝트의 구성을 도와주는 역할을 한다.
 #### (1) cmd에서 글로벌 설치 명령어 수행
 ```
 npm install -g @vue/cli
@@ -81,7 +82,11 @@ npm install -g @vue/cli
 #### (2) 글로벌 설치 여부 확인
 cmd를 열고 아무 위치에서나 `vue ui` 명령어 입력하여 vue 프로젝트 세팅용 브라우저 화면이 표시되는지 확인
 
-### 3) Atom 설치
+### 3) vue cli로 SFC(Single File Component)만들기
+#### (1) v
+
+
+### 4) Atom 설치
 #### (1) 설치
 https://atom.io/ 에서 설치파일 다운로드 및 실행
 #### (2) 유용한 플러그인
@@ -112,6 +117,7 @@ A. Settings > Install > 상단 Install Themes에서 Packages로 모드를 변경
   * color-picker
   * javascript-snippets
   * platformio-ide-terminal
+  * script : 브라우저로 바로 띄우기(ctrl+shift+b)
 
 
 ### 4) 개요
