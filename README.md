@@ -26,6 +26,10 @@
   - [2. Hello, world](#2-hello-world)
     - [1) jquery로 Hello, world 어플리케이션](#1-jquery로-hello-world-어플리케이션)
     - [2) vue.js로 변환하기](#2-vuejs로-변환하기)
+    - [3) 정답](#3-정답)
+  - [3.life cycle](#3life-cycle)
+    - [1) 라이프 사이클의 순서 및 종류](#1-라이프-사이클의-순서-및-종류)
+    - [2)](#2)
 
 <!-- /code_chunk_output -->
 ---
@@ -137,10 +141,45 @@ A. 여러가지 면에서 차이가 있지만, 가장 두드러지는 차이점�
 ## 2. Hello, world
 ### 1) jquery로 Hello, world 어플리케이션
 > https://github.com/chunkind/study_vuejs/blob/master/1_hello_world/1_0_hello_world_jquery_completed.html
-### 2) vue.js로 변환하기
+### 2) 문제
 ```
-아래 링크 파일을 받아 vue.js로 변환 하기.
+위 jquery 템플릿을 vue.js로 변환 하는 문제
+아래 링크 파일을 받아 vue.js로 변환 하기
 ```
 > https://github.com/chunkind/study_vuejs/blob/master/1_hello_world/1_1_hello_world_vue_sample.html
 ### 3) 정답
-> 
+> https://github.com/chunkind/study_vuejs/blob/master/1_hello_world/1_2_hello_world_vue_completed.html
+
+---
+## 3.life cycle
+(참고 이미지) Vue의 라이프 사이클 ![Vue life-cycle](./imgs/02_lifecycle_re.png)
+
+### 1) 라이프 사이클의 순서 및 종류
+
+**(1)beforeCreate**
+>new Vue()로 Vue 컴포넌트가 생성되고 나서 가장 처음으로 실행되는 라이프 사이클 단계. 이 단계에서는 Vue 내부의 data, methods 속성 등에 아직 접근할 수 없고, 마찬가지로 DOM에도 접근할 수 없다.
+
+**(2)created**
+>beforeCreate 다음으로 실행되는 단계로 data, methods 속성이 정의되어 `this.data`등으로 접근이 가능하기 때문에 보통 AJAX 통신이 여기서 호출되는 경우가 많다. 단, Vue 컴포넌트가 아직 화면에 부착되기 전이기 때문에 template 속성에 정의된 DOM 요소에 접근할 수는 없다.
+
+**(3)beforeMount**
+>template 속성에 지정한 마크업 속성이 있는 경우 이를 자바스크립트 render() 함수에 전달하기 전에 사용되는 라이프 사이클이다. 일반적인 경우 로직의 추가 빈도가 낮다.
+
+**(4)mounted**
+>화면 요소가 모두 부착되고 나서 호출되는 단계로 template 속성으로 표현된 화면 요소에 접근할 수 있으므로 페이지 로딩 후 기본값 세팅 및 화면 제어를 수행하기 적절한 단계. 다만 해당 컴포넌트가 부착되자마자 호출되기 때문에 하위 컴포넌트나 외부 라이브러리는 아직 완료되지 않은 상태일 수 있다.
+
+**(5)beforeUpdate**
+>뷰 인스턴스가 추적/감시하는 데이터가 변경되었을 때 화면 요소를 변경하기 위해 호출되는 단계. 변경 예정인 새 데이터에 접근할 수 있어서 변경 예정 데이터의 값과 관련된 로직을 추가로 넣을 수 있다.
+
+**(6)updated**
+>뷰 인스턴스가 추적하는 데이터가 변경되고 나서 화면을 새롭게 그린 후 호출되는 라이프 사이클. 이미 화면까지 변경이 완료된 상태이므로, 이 단계에서 데이터 조작을 시도하면 무한 루프가 발생한다. 화면 요소만 추가로 건드리는게 가능.
+
+**(7)beforeDestroy**
+>뷰 인스턴스가 제거되기 직전의 라이프 사이클. 이 단계에서는 아직 인스턴스 내부에 접근 가능하므로 뷰 인스턴스 데이터를 삭제하기 좋은 타이밍.
+
+**(8)destroyed**
+>뷰 인스턴스가 제거되고 나서 호출되는 단계. 별도로 사용되지 않음.
+
+### 2) 문제
+
+### 3) 정답
