@@ -54,6 +54,8 @@
     - [2)object](#2object)
       - [(1) 문제](#1-문제-5)
       - [(2) 정답](#2-정답-5)
+    - [3)array](#3array)
+    - [4)object](#4object)
 
 <!-- /code_chunk_output -->
 ---
@@ -163,6 +165,9 @@ A. 여러가지 면에서 차이가 있지만, 가장 두드러지는 차이점�
 
 ---
 ## 2. Hello, world
+```
+Hello, world! 를 jquery, vue.js로 만들어보는 예제
+```
 ### 1) jquery로 Hello, world 어플리케이션
 > https://github.com/chunkind/study_vuejs/blob/master/1_hello_world/1_0_hello_world_jquery_completed.html
 ### 2) 문제
@@ -204,9 +209,13 @@ A. 여러가지 면에서 차이가 있지만, 가장 두드러지는 차이점�
 **(8)destroyed**
 >뷰 인스턴스가 제거되고 나서 호출되는 단계. 별도로 사용되지 않음.
 
-### 2) 문제
+### 2) 관련 예제
+```
+life cycle을 알아보는 에제
+```
+#### (1) 문제
 > https://github.com/chunkind/study_vuejs/blob/master/2_life_cycle/2_2_life_cycle_sample.html
-### 3) 정답
+#### (2) 정답
 > https://github.com/chunkind/study_vuejs/blob/master/2_life_cycle/2_1_life_cycle_completed.html
 
 ---
@@ -233,6 +242,9 @@ v-bind:src ="경로"  or  :src="경로" 둘다 사용 가능.
 
 <br><br>
 ### 3) 양방향 바인딩 지시자
+```
+model을 변경하면 model을 사용하는 쪽의 view도 변경 된다!
+```
 >html
 ```
 v-model="message"  or  {{message}}
@@ -268,6 +280,9 @@ v-show => 렌더링은 하되, display none 시켜버림(화면에만 안보이�
 
 ---
 ## 5.iterated directive
+```
+array, object를 for문과 같이 사용하여 요소들을 다루는 예제
+```
 ### 1)array
 #### (1) 문제
 >https://github.com/chunkind/study_vuejs/blob/master/4_iterated_directive/4_1_iterate_directive_for_array_sample.html
