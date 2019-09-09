@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello World!</title>
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      노트 10/10+ 사전예약자 목록<br />
+      <table border="1px">
+        <tr>
+          <td>예약번호</td>
+          <td>성명</td>
+          <td width="200px">배송지</td>
+          <td>휴대폰 번호</td>
+          <td>개통 통신사</td>
+        </tr>
+        <!-- v-for를 사용하는 tr을 여기에 추가하여 목록을 표시해주세요 -->
+
+      </table>
+
+    </div>
+    <script type="text/javascript">
+      var model = {
+        userArray : [
+          { no: 3395958288, name : "이윤성", shipping_address : "서울 중구", phone_number : "010-0103-3303", phone_carrier : "SKT" },
+          { no: 3395958289, name : "김건우", shipping_address : "서울 광진구", phone_number : "010-5837-3727", phone_carrier : "LGT" },
+          { no: 3395958210, name : "박우진", shipping_address : "서울 관악구", phone_number : "010-0238-9483", phone_carrier : "KT" },
+          { no: 3395958211, name : "정지훈", shipping_address : "서울 강서구", phone_number : "010-3983-4533", phone_carrier : "LGT" },
+          { no: 3395958212, name : "이현지", shipping_address : "서울 중랑구", phone_number : "010-4843-5648", phone_carrier : "SKT" },
+        ]
+      }
+
+      var vm = new Vue({
+        el : "#app",
+        data : model
+      });
+    </script>
+  </body>
+</html>

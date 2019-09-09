@@ -31,6 +31,23 @@
     - [1) 라이프 사이클의 순서 및 종류](#1-라이프-사이클의-순서-및-종류)
     - [2) 문제](#2-문제-1)
     - [3) 정답](#3-정답-1)
+  - [4.기본 지시자(directive)](#4기본-지시자directive)
+    - [1) v-text, v-html](#1-v-text-v-html)
+      - [(1) 문제](#1-문제)
+      - [(2) 정답](#2-정답)
+    - [2) bind](#2-bind)
+      - [(1) 문제](#1-문제-1)
+      - [(2) 정답](#2-정답-1)
+    - [3) 양방향 바인딩 지시자](#3-양방향-바인딩-지시자)
+      - [(1) 문제](#1-문제-2)
+      - [(2) 정답](#2-정답-2)
+    - [4) if, else if, else](#4-if-else-if-else)
+      - [(1) 문제](#1-문제-3)
+      - [(2) 정답](#2-정답-3)
+    - [5) show](#5-show)
+      - [(1)문제](#1문제)
+      - [(2)정답](#2정답)
+  - [5.iterated directive](#5iterated-directive)
 
 <!-- /code_chunk_output -->
 ---
@@ -187,3 +204,61 @@ A. 여러가지 면에서 차이가 있지만, 가장 두드러지는 차이점�
 > https://github.com/chunkind/study_vuejs/blob/master/2_life_cycle/2_1_life_cycle_completed.html
 
 ---
+## 4.기본 지시자(directive)
+### 1) v-text, v-html
+```
+이 둘의 차이는 jquery의 $().text(); 와 $().html();의 차이이다.
+글자 그대로 사용할 것이냐 태그로 사용할 것인가의 차이이다.
+```
+#### (1) 문제
+>https://github.com/chunkind/study_vuejs/blob/master/3_default_directive/3_1_default_directive_sample.html
+#### (2) 정답
+>https://github.com/chunkind/study_vuejs/blob/master/3_default_directive/3_1_default_directive_completed.html
+
+<br><br>
+### 2) bind
+```
+v-bind:src ="경로"  or  :src="경로" 둘다 사용 가능.
+```
+#### (1) 문제
+>https://github.com/chunkind/study_vuejs/blob/master/3_default_directive/3_2_bind_directive_sample.html
+#### (2) 정답
+>https://github.com/chunkind/study_vuejs/blob/master/3_default_directive/3_2_bind_directive_completed.html
+
+<br><br>
+### 3) 양방향 바인딩 지시자
+>html
+```
+v-model="message"  or  {{message}}
+```
+>javascript
+```
+model = {message:"hello world!"};
+```
+#### (1) 문제
+>https://github.com/chunkind/study_vuejs/blob/master/3_default_directive/3_3_two_way_binding_directive_sample.html
+#### (2) 정답
+>https://github.com/chunkind/study_vuejs/blob/master/3_default_directive/3_3_two_way_binding_directive_completed.html
+
+<br><br>
+### 4) if, else if, else
+#### (1) 문제
+>https://github.com/chunkind/study_vuejs/blob/master/3_default_directive/3_4_if_else_if_directive_sample.html
+#### (2) 정답
+>https://github.com/chunkind/study_vuejs/blob/master/3_default_directive/3_4_if_else_if_directive_completed.html
+
+<br><br>
+### 5) show
+```
+v-if 와 v-show의 차이점은?
+v-if => 렌더링 안함.
+v-show => 렌더링은 하되, display none 시켜버림(화면에만 안보이고 코드는 있음)
+```
+#### (1)문제
+>https://github.com/chunkind/study_vuejs/blob/master/3_default_directive/3_5_show_directive_sample.html
+#### (2)정답
+>https://github.com/chunkind/study_vuejs/blob/master/3_default_directive/3_5_show_directive_completed.html
+
+
+---
+## 5.iterated directive
