@@ -303,3 +303,9 @@ array, object를 for문과 같이 사용하여 요소들을 다루는 예제
 >https://github.com/chunkind/study_vuejs/blob/master/4_iterated_directive/4_3_iterate_directive_for_array_completed.html
 ### 4)object
 >https://github.com/chunkind/study_vuejs/blob/master/4_iterated_directive/4_4_iterate_directive_for_object_completed.html
+
+
+---
+## 출처
+### 이윤성님 github
+>https://github.com/esperancer/tz_1909_vue_study
