@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Word List</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+  </head>
+  <body >
+    <div id="app">
+      <div v-bind:style="style_load" class="load_area">{{load_text}}</div>
+      <div v-bind:style="style_list" class="main_area">
+        <div class="header">
+          <h2>{{title}}</h2>
+          <div class="cnt">{{index+1}}/{{total}}</div>
+        </div>
+        <div class="body">
+          <div class="left">
+            <a href="#" v-if="index != '0'" @click="fn_frst_work" ><img width="15px" src="img/icon-left2.png" /></a>
+            <a href="#" v-if="index != '0'" @click="fn_prev_work" ><img width="15px" src="img/icon-left.png" /></a>
+          </div>
+          <div class="word_list">
+            <div class="word">{{word_list[index].word}}</div>
+            <div class="value">{{word_list[index].value}}</div>
+          </div>
+          <div class="right">
+            <a href="#" v-if="index != total-1" @click="fn_next_work" ><img width="15px" src="img/icon-right.png" /></a>
+            <a href="#" v-if="index != total-1" @click="fn_last_work" ><img width="15px" src="img/icon-right2.png" /></a>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="auth">made by chunkind.</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/common.js"></script>
+</html>
