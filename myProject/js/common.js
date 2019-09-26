@@ -1,6 +1,9 @@
 var model = {
-  title:"",
-  load_text:"",
+  txt : {
+    title:'',
+    load_text:'',
+    btn_txt:[]
+  },
   index:0,
   total:0,
   style_load:{},
@@ -13,8 +16,13 @@ var vm = new Vue({
   data : model,
   created: function() {
     //초기화
-    this.title = "영단어장";
-    this.load_text = "Loading...";
+    this.txt.title = '영단어장';
+    this.txt.load_text = 'Loading...';
+    this.txt.btn_txt.push({no:'1',name:'단어토글'});
+    this.txt.btn_txt.push({no:'2',name:'뜻토글'});
+    this.txt.btn_txt.push({no:'3',name:'읽기'});
+    this.txt.btn_txt.push({no:'4',name:'외움'});
+
     this.index = 0;
     this.style_load = {display:'block'};
     this.style_list = {display:'none'};
@@ -37,7 +45,7 @@ var vm = new Vue({
       alert("환영 합니다.");
       vm.style_load = {display:'none'};
       vm.style_list = {display:'block'};
-    }, 2000);
+    }, 1000);
   },
   methods:{
     fn_frst_work : function(){
@@ -52,5 +60,20 @@ var vm = new Vue({
     fn_last_work : function(){
       this.index = this.word_list.length-1;
     },
+    fn_btn_action : function(no){
+      alert(no);
+      if(no == 1){
+
+      }
+      else if(no == 2){
+
+      }
+      else if(no == 3){
+
+      }
+      else if(no == 4){
+
+      }
+    }
   }
 });

@@ -9,10 +9,10 @@
   </head>
   <body >
     <div id="app">
-      <div v-bind:style="style_load" class="load_area">{{load_text}}</div>
+      <div v-bind:style="style_load" class="load_area">{{txt.load_text}}</div>
       <div v-bind:style="style_list" class="main_area">
         <div class="header">
-          <h2>{{title}}</h2>
+          <h2>{{txt.title}}</h2>
           <div class="cnt">{{index+1}}/{{total}}</div>
         </div>
         <div class="body">
@@ -30,6 +30,11 @@
           </div>
         </div>
         <div class="footer">
+          <div class="button_area">
+            <a href="javascript:;" v-for="obj in txt.btn_txt" @click="fn_btn_action(obj.no)" :data-idx="obj.no">
+                <span>{{obj.name}}</span>
+            </a>
+          </div>
           <div class="auth">made by chunkind.</div>
         </div>
       </div>
