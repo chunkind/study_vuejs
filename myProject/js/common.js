@@ -2,10 +2,14 @@ var model = {
   txt : {
     title:'',
     load_text:'',
+    login_text:'',
+    last_text:'',
     btn_txt:[]
   },
   index:0,
   total:0,
+  word_toggle:true,
+  value_toggle:true,
   style_load:{},
   style_list:{},
   word_list:[],
@@ -18,6 +22,9 @@ var vm = new Vue({
     //초기화
     this.txt.title = '영단어장';
     this.txt.load_text = 'Loading...';
+    this.txt.login_text = '환영 합니다.';
+    this.txt.last_text = '마지막 단어 입니다.';
+
     this.txt.btn_txt.push({no:'1',name:'단어토글'});
     this.txt.btn_txt.push({no:'2',name:'뜻토글'});
     this.txt.btn_txt.push({no:'3',name:'읽기'});
@@ -42,10 +49,10 @@ var vm = new Vue({
   mounted: function() {
     var vm = this;
     setTimeout(function() {
-      alert("환영 합니다.");
+      alert(vm.txt.login_text);
       vm.style_load = {display:'none'};
       vm.style_list = {display:'block'};
-    }, 1000);
+    }, 500);
   },
   methods:{
     fn_frst_work : function(){
@@ -61,19 +68,26 @@ var vm = new Vue({
       this.index = this.word_list.length-1;
     },
     fn_btn_action : function(no){
-      alert(no);
       if(no == 1){
-
+        this.word_toggle = !this.word_toggle;
       }
       else if(no == 2){
-
+        this.value_toggle = !this.value_toggle;
       }
       else if(no == 3){ //단어읽기.
         var word = document.getElementById('txt_word').innerText;
         responsiveVoice.speak(word);
       }
       else if(no == 4){
-
+        if(this.total == 1){
+          alert(this.txt.last_text);
+          return;
+        }
+        this.word_list.splice(this.index, 1);
+        this.total = this.word_list.length;
+        if(this.index == this.total){
+          this.index = 0;
+        }
       }
     }
   }

@@ -2,7 +2,7 @@
 
 .load_area{
   display: none;
-  background-color: #B8C7CC;
+  background-color: #EAEAEA;
   width: 400px;
   height: 600px;
   font-size: 60px;
@@ -14,7 +14,7 @@
   display: none;
   width: 400px;
   height: 600px;
-  background-color: #D8F0F9;
+  background-color: #EAEAEA;
 }
 
 .main_area .header{
@@ -27,6 +27,8 @@
 
 .main_area .header .cnt{
   text-align: right;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .main_area .body{
@@ -54,10 +56,15 @@
 .main_area .body .word_list .word{
   height: 50%;
   cursor: pointer;
+  position: fixed;
+  width: 200px;
 }
 .main_area .body .word_list .value{
-  height: 50%;
   cursor: pointer;
+  position: fixed;
+  width: 200px;
+  top: 250px;
+  height: 230px;
 }
 .main_area .body .right{
   float: left;
@@ -71,8 +78,21 @@
   height: 20%;
   width: 100%;
 }
+.main_area .footer .button_area a{
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  background-color: #8C8C8C;
+  color: white;
+  width: 88px;
+  height: 34px;
+  display: inline-block;
+  text-align: center;
+  line-height: 2;
+  border-radius: 6px;
+}
 
 .main_area .footer .auth{
-  line-height: 10;
+  line-height: 5;
   text-align: center;
 }
