@@ -68,8 +68,9 @@ var vm = new Vue({
       else if(no == 2){
 
       }
-      else if(no == 3){
-
+      else if(no == 3){ //단어읽기.
+        var word = document.getElementById('txt_word').innerText;
+        responsiveVoice.speak(word);
       }
       else if(no == 4){
 
