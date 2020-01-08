@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>v-if</title>
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="account">
+        예금액 : <input type="text" v-model="amount" />
+        <!-- v-if : 랜더링 하지 않음 -->
+        <img v-if="amount<0" src="../imgs/error.png" title="마이너스는 허용하지 않습니다." style="width:15px; vertical-align:middle" />
+    </div>
+    <script type="text/javascript">
+        var simple1 = new Vue({
+            el: '#account',
+            data: {
+                amount: 0
+            }
+        })
+    </script>
+</body>
+
+</html>
