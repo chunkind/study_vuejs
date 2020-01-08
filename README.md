@@ -65,7 +65,41 @@
 ### 1) vue와 다른 프레임워크의 비교
 >https://kr.vuejs.org/v2/guide/comparison.html
 
-### 1) NPM 이란?
+### 2) Vue-CLI 설치
+>Vue-CLi는 에반 유가 공식적으로 관리하는 커맨드라인 인터페이스 기반의 스캐폴딩(Scaffolding) 도구이다. Command Line Interface의 약자로 윈도우의 cmd나 맥의 터미털등의 프로그램에서 실행 가능하게 하는 프로그램을 말한다. Vue-CLI 3란 vue.js 개발을 위한 커맨드 라인 시스템으로 vue.js core에서 공식으로 제공하는 CLI이다. 애플리케이션 개발에 집중 할 수 있도록 프로젝트의 구성을 도와주는 역할을 한다.
+
+```
+방법 1. 
+npm install -g @vue/cli
+
+방법 2. yarn과 같이 설치
+* yarn이 npm보다 실행속도가 빠르기 때문에 최근에는 yarn을 선호한다.
+npm install -g yarn @vue/cli  (Window)
+sudo npm install -g yarn @vue/cli  (MacOS)
+
+방법 3. 특정 버전을 받고 싶을때
+npm install -g @vue/cli@3.5.1  => 특정 버전을 설치하고 싶을때
+
+방법 4. Vue CLI는 2.x버전일 때는 webpack.browserify와 같은 프로젝트 템플릿을 이용해서 다음과 같은 명령어를 이용해 스캐폴딩 코드를 생성 한다.
+vue init webpack myapp
+```
+
+(참고) -g 옵션은 글로벌 설치를 의미합니다. (글로벌 설치일 때는 커맨드를 실행하는 위치 상관없음)
+(참고) 글로벌 설치시 `C:\Users\%username%\AppData\Roaming\npm\node_modules` 하위로 설치됩니다.
+
+#### 1) vue cli로 프로잭트 생성.
+```
+방법 1. 
+vue create [프로잭트명]
+
+방법 2. 
+vue ui 명령을 실행하여 웹 기반의 Vue 프로젝트 매니저 화면을 이용해 프로젝트를 생성
+```
+
+### 3) 글로벌 설치 여부 확인
+cmd를 열고 아무 위치에서나 `vue ui` 명령어 입력하여 vue 프로젝트 세팅용 브라우저 화면이 표시되는지 확인
+
+### 4) NPM 이란?
 >Node Package Module의 약자로 Node.js에서 사용 가능한 모듈을 패키지화 하여 모아놓은 것. 프론트 쪽 프로잭트 할때 대부분의 모듈은 node.js의 모듈 패키지인 npm을 사용 하는 듯 하다.
 #### (1) 버전확인(cmd에서)
 C:\Users\ck>node --version
@@ -73,54 +107,9 @@ C:\Users\ck>npm --version
 #### (2) 설치
 https://nodejs.org/ko/
 
-### 2) CLI 란?
->Command Line Interface의 약자로 윈도우의 cmd나 맥의 터미털등의 프로그램에서 실행 가능하게 하는 프로그램을 말한다. Vue-CLI 3란 vue.js 개발을 위한 커맨드 라인 시스템으로 vue.js core에서 공식으로 제공하는 CLI이다. 애플리케이션 개발에 집중 할 수 있도록 프로젝트의 구성을 도와주는 역할을 한다.
-#### (1) cmd에서 글로벌 설치 명령어 수행
-```
-npm install -g @vue/cli
-```
-(참고) -g 옵션은 글로벌 설치를 의미합니다. (글로벌 설치일 때는 커맨드를 실행하는 위치 상관없음)
-(참고) 글로벌 설치시 `C:\Users\%username%\AppData\Roaming\npm\node_modules` 하위로 설치됩니다.
-
-#### (2) 글로벌 설치 여부 확인
-cmd를 열고 아무 위치에서나 `vue ui` 명령어 입력하여 vue 프로젝트 세팅용 브라우저 화면이 표시되는지 확인
-
-### 3) vue cli로 SFC(Single File Component)만들기
-#### (1) v
 
 
-### 4) Atom 설치
-#### (1) 설치
-https://atom.io/ 에서 설치파일 다운로드 및 실행
-#### (2) 유용한 플러그인
-###### (참고) Setting 메뉴 단축키 `Ctrl + ,(콤마)`
 
-**[테마 설치]**
-
-A. Settings > Install > install Packages에서 Themes로 모드를 변경 후 아래 키워드 검색하여 설치
-  * seti-ui
-  * atom-material-syntax-dark
-
-B. Settings > Themes > Choose a Theme > UI Theme에서 seti 선택하여 적용
-
-C. Settings > Themes > Choose a Theme > Syntax Theme에서 Atom Material Dark 선택하여 적용
-
-```
-(참고) 이 테마는 파일 확장명에 따른 직관적인 아이콘과 색상 등으로 파일의 명확한
-구분이 가능하게 해줍니다. (Atom 사용시 추천 테마)
-```
-
-**[플러그인 설치]**
-
-A. Settings > Install > 상단 Install Themes에서 Packages로 모드를 변경 후 아래 키워드 검색하여 설치
-  * language-vue
-  * atom-beautify
-  * autoclose-html
-  * highlight-selected
-  * color-picker
-  * javascript-snippets
-  * platformio-ide-terminal
-  * script : 브라우저로 바로 띄우기(ctrl+shift+b)
 
 
 ### 4) 개요
