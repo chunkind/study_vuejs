@@ -62,6 +62,9 @@
 <!-- /code_chunk_output -->
 ---
 ## 0.사전준비
+### 1) vue와 다른 프레임워크의 비교
+>https://kr.vuejs.org/v2/guide/comparison.html
+
 ### 1) NPM 이란?
 >Node Package Module의 약자로 Node.js에서 사용 가능한 모듈을 패키지화 하여 모아놓은 것. 프론트 쪽 프로잭트 할때 대부분의 모듈은 node.js의 모듈 패키지인 npm을 사용 하는 듯 하다.
 #### (1) 버전확인(cmd에서)
