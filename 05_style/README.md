@@ -25,4 +25,3 @@ CSS 클래스를 바인딩하기 위해서 v-bind:class를 사용한다. 이때 
 # 5.컴포넌트에서의 스타일 적용
 예제 08번 실행후 아래와 명령어를 적용
 vm.boxstyle.boxcolor = false 
-# 6.스타일 예제
