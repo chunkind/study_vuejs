@@ -18,6 +18,14 @@
             data: {
                 amt: 1234567
             },
+            //메서드 추가.
+            methods: {
+                sum: function() {
+                    var n = Number(this.num);
+                    if (Number.isNaN(n) || n < 1) return 0;
+                    return ((1 + n) * n) / 2;
+                }
+            },
             computed: {
                 amount: {
                     get: function() {
