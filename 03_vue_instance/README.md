@@ -2,11 +2,13 @@
 ```
 https://kr.vuejs.org/v2/guide/reactivity.html
 ```
+---
 
 # 2.연락처서비스 API
 ```
 http://sample.bmaster.kro.kr/
 ```
+---
 
 # 3.el, data, computed 옵션
 ## 1)el
@@ -25,6 +27,7 @@ vm.$data.name 과 같이 vm(뷰객체)에 $data 로 접근한다.
 ## 4)computed 함수에 접근하는법
 vm.sum
 vm.$options.computed.sum
+---
 
 # 4.메서드
 ## 1)메서드와 계산형 속성의 차이
@@ -35,6 +38,7 @@ vm.$options.computed.sum
 
 ## 2)메서드 작성시 주의점
 화살표함수 내부에서는 this가 vue 인스턴스를 가리키지 않고 전역객체를 가리키기 때문에 사용하는 것을 지양한다.
+---
 
 # 5.관찰 속성
 ## 1)watch
@@ -43,9 +47,11 @@ vm.$options.computed.sum
 ## 2)watch와 computed의 차이점
 아직... 잘 모르겠다...
 비동기라면 watch 동기라면 computed 라는데.. 뭔 개솔??..
+---
 
 # 6.v-cloak 디렉티브
 예제 08번
+---
 
 # 7.Vue 인스턴스 라이프 사이클
 (참고 이미지) Vue의 라이프 사이클 ![Vue life-cycle](../imgs/02_lifecycle_re.png)
@@ -74,3 +80,4 @@ Vue 인스턴스가 제거되기 전에 호출된다.
 
 ## 8)destroyed
 Vue 인스턴스가 제거된 후에 호출. 이 훅이 호출될 때는 Vue 인스턴스의 모든 디렉티브의 바인딩이 해제되고, 이벤트 연결도 모두 제거 된다.
+---

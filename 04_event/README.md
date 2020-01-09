@@ -3,6 +3,7 @@
 https://developer.mozilla.org/ko/docs/Web/Events
 https://www.w3schools.com/tags/ref_eventattributes.asp
 ```
+---
 
 # 2.인라인 이벤트 처리
 ```
@@ -13,11 +14,13 @@ ex) v-on:click="balance += parseInt(amount)"
 
 @click="함수"
 ```
+---
 
 # 3.이벤트 핸들러 메서드
 이벤트 처리 함수를 작성하여 처리.
 예제 02번 참고.
 
+---
 # 4.이벤트 객체
 이벤트 핸들러에서 첫번째 파라미터로 이벤트 객체를 받을 수 있다. 아래는 주요 이벤트 객체의 속성들이다.
 
@@ -71,6 +74,7 @@ screenX, screenY - 마우스 이벤트가 일어났을 때의 모니터 화면(S
 preventDefault() - 기본 이벤트의 자동 실행을 중지시킴
 stopPropagation() - 이벤트의 전파를 막음
 
+---
 # 5.기본 이벤트
 ```
 이벤트를 연결하지 않았음에도 뭔가 실행되는 기능을 가지고 있는 것들 이와 같이 HTML문서나 요소에 어떤 기능을 실행하도록 이미 정의되어 있는 이벤트를 기본 이벤트(Default Event)라고 부른다. 대표적인 기본 이벤트는 아래와 같다.
@@ -85,6 +89,7 @@ stopPropagation() - 이벤트의 전파를 막음
 ## 1) 컨텍스트메뉴 안뜨게 하는법
 v-on:contextmenu.prevent="함수"
 
+---
 # 6.이벤트 전파와 버블링
 ```
 이벤트 처리는 3단계를 거친다.
@@ -93,7 +98,7 @@ v-on:contextmenu.prevent="함수"
 * 3단계(BUBBLING_PHASE) - 이벤트가 발생한 요소로부터 상위 요소로 거슬러 올라가면서 동일한 이벤트를 호출시키는 버블링 단계
 일반적으로는 2단계 RAISING, 3단계 BUBBLING_PHASE에서 연결된 이벤트 함수가 호출 된다.
 ```
-예제 04번 참조.
+## 1) 예제 04
 예제 04의 결과값을 정리하면 아래와 같다.
 ---
 ||#inner click|#outer click|
@@ -103,4 +108,35 @@ v-on:contextmenu.prevent="함수"
 |target| #inner| #inner|
 ---
 
+## 2)이벤트 전파와 관련된 수식어
+
+* .stop - 이벤트 전파를 중단시킨다.
+* .capture - CAPTURING_PHASE 단계에서만 이벤트가 발생한다.
+* .self - RAISING_PHASE 단계일 때만 이벤트가 발생한다.
+* prevent 수식어와 같이 사용 가능(실무적으로 의미가 없을것 같다.)
+ex)
+---
+
 # 7.이벤트 수식어
+```
+.prevent, .stop, .self와 같은 이벤트 수식어(Event Modifiers) 이밖에도 다양한 이벤트 수식어가 제공 된다.
+```
+
+## 1)once
+once 수식어는 한 번만 이벤트를 발생시킨다.
+예제 07번 참조.
+
+## 2)keycode
+```
+키보드 관련 이벤트를 처리할 때 사용할 수 있는 수식어.키보드의 키를 누를 때 고유의 키코드(KeyCode) 값을 가질 때만 이벤트를 발생시킬 수 있다.
+사용법 : v-on:keyup.13="함수"
+```
+예제 08번 참조.
+
+* 키코드 수식어 별칭
+.enter .tab .delete .esc .space .up .down .left .right .ctrl .alt .shift .meta
+이 수식어들은 모두 keyup 이벤트에 적용할 수 있다. 여러개 결합하여 사용 할 수도 있다.
+ex) v-on:keyup.ctrl.67="copy"
+
+* 마우스 버튼 수식어 별칭
+.left .right .middle
