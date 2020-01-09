@@ -95,9 +95,12 @@ v-on:contextmenu.prevent="함수"
 ```
 예제 04번 참조.
 예제 04의 결과값을 정리하면 아래와 같다.
-|이름|#inner click|#outer click|
+---
+||#inner click|#outer click|
 |---|---|---|
 |eventPhase| 2(AT_TARGET)|3(BUBBLING)|
 |current target| #inner| #outter|
 |target| #inner| #inner|
+---
+
 # 7.이벤트 수식어
