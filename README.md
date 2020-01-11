@@ -116,8 +116,6 @@ Vue.js devtools는 파일 URL로 실행해도 사용할 수 있다. 하지만 �
 - 실행
 live-server
 
-
-
 ### 4) 개요
 #### (1) Vue의 구조
 
@@ -156,31 +154,3 @@ B. 나머지 두 라이브러리는 강력한 인지도를 바탕으로 하는 �
 (참고문서) React인가 Vue인가?
 ```
 > https://joshua1988.github.io/web_dev/vue-or-react/
-
-#### (4) Vue와 JQuery의 사용
-A. 여러가지 면에서 차이가 있지만, 가장 두드러지는 차이점은 Vue는 화면 요소를 제어할 때 가상의 DOM을 조작한 후 그것을 실제 DOM에 반영하는 반면, JQuery는 실제 DOM을 직접적으로 조작한다는 점이다. **이로 인해 JQuery를 통해 화면 요소에 변경을 가할 경우 Vue에서는 관측되지 않아 변경사항이 반영되지 않는다.** Vue는 MVVM 모델에 따라 가상 DOM의 데이터를 관측하여 변경사항을 화면에 반영한다.
-
----
-## 1.기본 템플릿
-### 1) 직접 script에 추가
-> https://kr.vuejs.org/v2/guide/installation.html#%EC%A7%81%EC%A0%91-lt-script-gt-%EC%97%90-%EC%B6%94%EA%B0%80
-### 2) 템플릿 작성(CDN)
-> https://github.com/chunkind/study_vuejs/blob/master/0_template/0_1_default_template.html
-
----
-## 2. Hello, world
-```
-Hello, world! 를 jquery, vue.js로 만들어보는 예제
-```
-### 1) jquery로 Hello, world 어플리케이션
-> https://github.com/chunkind/study_vuejs/blob/master/1_hello_world/1_0_hello_world_jquery_completed.html
-### 2) 문제
-```
-위 jquery 템플릿을 vue.js로 변환 하는 문제
-아래 링크 파일을 받아 vue.js로 변환 하기
-```
-> https://github.com/chunkind/study_vuejs/blob/master/1_hello_world/1_1_hello_world_vue_sample.html
-### 3) 정답
-> https://github.com/chunkind/study_vuejs/blob/master/1_hello_world/1_2_hello_world_vue_completed.html
-
----
