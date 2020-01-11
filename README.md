@@ -61,11 +61,11 @@
 
 <!-- /code_chunk_output -->
 ---
-## 0.사전준비
-### 1) vue와 다른 프레임워크의 비교
+# 0.사전준비
+## 1) vue와 다른 프레임워크의 비교
 >https://kr.vuejs.org/v2/guide/comparison.html
 
-### 2) Vue-CLI 설치
+## 2) Vue-CLI 설치
 >Vue-CLi는 에반 유가 공식적으로 관리하는 커맨드라인 인터페이스 기반의 스캐폴딩(Scaffolding) 도구이다. Command Line Interface의 약자로 윈도우의 cmd나 맥의 터미털등의 프로그램에서 실행 가능하게 하는 프로그램을 말한다. Vue-CLI 3란 vue.js 개발을 위한 커맨드 라인 시스템으로 vue.js core에서 공식으로 제공하는 CLI이다. 애플리케이션 개발에 집중 할 수 있도록 프로젝트의 구성을 도와주는 역할을 한다.
 
 ```
@@ -87,7 +87,7 @@ vue init webpack myapp
 (참고) -g 옵션은 글로벌 설치를 의미합니다. (글로벌 설치일 때는 커맨드를 실행하는 위치 상관없음)
 (참고) 글로벌 설치시 `C:\Users\%username%\AppData\Roaming\npm\node_modules` 하위로 설치됩니다.
 
-#### 1) vue cli로 프로잭트 생성.
+## 3) vue cli로 프로잭트 생성.
 ```
 방법 1. 
 vue create [프로잭트명]
@@ -96,19 +96,25 @@ vue create [프로잭트명]
 vue ui 명령을 실행하여 웹 기반의 Vue 프로젝트 매니저 화면을 이용해 프로젝트를 생성
 ```
 
-### 3) 글로벌 설치 여부 확인
+## 4) 글로벌 설치 여부 확인
 cmd를 열고 아무 위치에서나 `vue ui` 명령어 입력하여 vue 프로젝트 세팅용 브라우저 화면이 표시되는지 확인
 
-### 4) NPM 이란?
+## 5) NPM 이란?
 >Node Package Module의 약자로 Node.js에서 사용 가능한 모듈을 패키지화 하여 모아놓은 것. 프론트 쪽 프로잭트 할때 대부분의 모듈은 node.js의 모듈 패키지인 npm을 사용 하는 듯 하다.
-#### (1) 버전확인(cmd에서)
+### (1) 버전확인(cmd에서)
 C:\Users\ck>node --version
 C:\Users\ck>npm --version
-#### (2) 설치
+### (2) 설치
 https://nodejs.org/ko/
 
+## 6) live-server 설치
+Vue.js devtools는 파일 URL로 실행해도 사용할 수 있다. 하지만 코드를 변경하고 재실행하려면 매번 새로 고침을 눌러야 하므로 번거롭다. 이럴 때 live-server라는 도구를 사용하면 핫리로딩(Hot Reloading)이라는 기능을 통해 코드가 변경되어 저장되면 브라우저 화면에 즉시 갱신 되로록 할 수 있다. live-server를 설치하기 위해서 다음의 명령어를 콘솔에서 실행
 
-
+- 설치 
+* npm install -g live-server (Window)
+* sudo npm install -g live-server(macOS)
+- 실행
+live-server
 
 
 
