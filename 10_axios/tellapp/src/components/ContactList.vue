@@ -43,7 +43,7 @@ import Paginate from 'vuejs-paginate';
 
 export default{
     name : 'contactList',
-    components : [Paginate],
+    components : {Paginate},
     props : ['contactlist'],
     computed : {
         totalpage : function(){

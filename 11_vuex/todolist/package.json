@@ -1,19 +1,16 @@
 {
-    "name": "tellapp",
+    "name": "todolist",
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "serve": "vue-cli-service serve",
+        "serve": "vue-cli-service serve --open",
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint"
     },
     "dependencies": {
-        "axios": "^0.19.1",
-        "bootstrap": "^3.3.7",
         "core-js": "^3.4.4",
-        "es6-promise": "^4.2.8",
         "vue": "^2.6.10",
-        "vuejs-paginate": "^1.9.3"
+        "vuex": "^3.1.2"
     },
     "devDependencies": {
         "@vue/cli-plugin-babel": "^4.1.0",
@@ -33,9 +30,7 @@
             "plugin:vue/essential",
             "eslint:recommended"
         ],
-        "rules": {
-            "no-console": "off"
-        },
+        "rules": {},
         "parserOptions": {
             "parser": "babel-eslint"
         }
