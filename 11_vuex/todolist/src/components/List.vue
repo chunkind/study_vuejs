@@ -27,35 +27,37 @@ ul li.checked::before {
 </style>
 <template>
     <ul id="todolist">
-        <li v-for="(a, index) in todolist" v-bind:class="checked(a.done)" 
-            v-on:click="doneToggle(index)" v-bind:key="a.id">
+        <li v-for="a in todolist" :key="a.id" :class="checked(a.done)" 
+            @click="doneToggle({id : a.id})">
             <span>{{ a.todo }}</span>
             <span v-if="a.done"> (완료)</span>
-            <span class="close" v-on:click.stop="deleteTodo(index)">&#x00D7;</span>
+            <span class="close" @click.stop="deleteTodo({id:a.id})">&#x00D7;</span>
         </li>
     </ul>
 </template>
 <script type="text/javascript">
 import Constant from '../constant';
+import { mapState, mapMutations } from 'vuex';
 
 export default {
     name : 'List',
-    computed : {
-        todolist() {
-            return this.$store.state.todolist;
-        }
-    },
+    computed : mapState(['todolist']),
     methods : {
         checked : function(done) {
             if(done) return { checked:true };
             else return { checked:false };
         },
-        doneToggle : function(index) {
-            this.todolist[index].done = !this.todolist[index].done;
+        doneToggle : function(id) {
+            this.$store.commit(Constant.DONE_TOGGLE, {id:id});
         },
-        deleteTodo : function(index) {
-            this.todolist.splice(index,1);
-        }
+        deleteTodo : function(id) {
+            this.$store.commit(Constant.DELETE_TODO, {id:id});
+        },
+        ...mapMutations([
+            Constant.DELETE_TODO,
+            Constant.DONE_TOGGLE
+        ])
     }
+    
 }
 </script>
