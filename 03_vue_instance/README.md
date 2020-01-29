@@ -56,6 +56,8 @@ vm.$options.computed.sum
 # 7.Vue 인스턴스 라이프 사이클
 (참고 이미지) Vue의 라이프 사이클 ![Vue life-cycle](../imgs/02_lifecycle_re.png)
 
+(참고 이미지2) Vue의 라이프 사이클 또다른 그림 ![Vue life-cycle2](../imgs/lifecycle.jpeg)
+
 ## 1)beforeCreate
 Vue 인스턴스가 생성되고 데이터에 대한 관찰 기능 및 이벤트 감시자 설정 전에 호출된다.
 

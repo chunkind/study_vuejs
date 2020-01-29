@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue Component Registration</title>
+    </head>
+    <body>
+        <div id="app">
+            <button>컴포넌트 등록</button>
+            <my-component></my-component><!-- 전역 컴포넌트 표시 -->
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+        <script>
+            Vue.component('my-component', {
+                template: '<div>전역 컴포넌트가 등록되었습니다!</div>'
+            });
+
+            new Vue({
+                el: '#app'
+            });
+        </script>
+    </body>
+</html>
+<!--
+1) 뷰 라이브러리 파일 로딩
+2) 뷰 생성자로 컴포넌트 등록 ( Vue.component() )
+3) 인스턴스 객체 생성 (옵션 속성 포함)
+4) 특정 화면 요소에 인스턴스 부착
+5) 인스턴스 내용 변환 (등록된 컴포넌트 내용도 변환) => <my-component>가 <div>로 변환됨
+6) 변환된 화면 요소를 사용자가 최종 확인
+-->
