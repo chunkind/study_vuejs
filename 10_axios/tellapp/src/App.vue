@@ -176,7 +176,9 @@ export default {
 </script>
 
 <style scoped>
-#app {
+@import url("https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.css");
+
+#container {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
