@@ -1,11 +1,4 @@
-# 1.이벤트 관련 문서
-```
-https://developer.mozilla.org/ko/docs/Web/Events
-https://www.w3schools.com/tags/ref_eventattributes.asp
-```
----
-
-# 2.인라인 이벤트 처리
+# 인라인 이벤트 처리
 ```
 v-on:이벤트명="함수"
 ex) v-on:click="balance += parseInt(amount)"
@@ -16,12 +9,12 @@ ex) v-on:click="balance += parseInt(amount)"
 ```
 ---
 
-# 3.이벤트 핸들러 메서드
+# 이벤트 핸들러 메서드
 이벤트 처리 함수를 작성하여 처리.
 예제 02번 참고.
 
 ---
-# 4.이벤트 객체
+# 이벤트 객체
 이벤트 핸들러에서 첫번째 파라미터로 이벤트 객체를 받을 수 있다. 아래는 주요 이벤트 객체의 속성들이다.
 
 ## 1)이벤트 객체의 주요 공통 속성
@@ -75,7 +68,7 @@ preventDefault() - 기본 이벤트의 자동 실행을 중지시킴
 stopPropagation() - 이벤트의 전파를 막음
 
 ---
-# 5.기본 이벤트
+# 기본 이벤트
 ```
 이벤트를 연결하지 않았음에도 뭔가 실행되는 기능을 가지고 있는 것들 이와 같이 HTML문서나 요소에 어떤 기능을 실행하도록 이미 정의되어 있는 이벤트를 기본 이벤트(Default Event)라고 부른다. 대표적인 기본 이벤트는 아래와 같다.
 
@@ -90,7 +83,7 @@ stopPropagation() - 이벤트의 전파를 막음
 v-on:contextmenu.prevent="함수"
 
 ---
-# 6.이벤트 전파와 버블링
+# 이벤트 전파와 버블링
 ```
 이벤트 처리는 3단계를 거친다.
 * 1단계(CAPTURING_PHASE) - 문서 내의 요소에서 이벤트가 발생했을 때 HTML 문서의 밖에서부터 이벤트를 발생시킨 HTML 요소까지 포착해 들어가는 이벤트 포착 단계
@@ -117,7 +110,7 @@ v-on:contextmenu.prevent="함수"
 ex)
 ---
 
-# 7.이벤트 수식어
+# 이벤트 수식어
 ```
 .prevent, .stop, .self와 같은 이벤트 수식어(Event Modifiers) 이밖에도 다양한 이벤트 수식어가 제공 된다.
 ```

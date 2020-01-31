@@ -8,6 +8,12 @@ http://bestof.js.org
 ## 3)lodash는 여러 가지 유틸리티 기능을 제공한다
 https://lodash.com
 
+## 4)이벤트 관련 문서
+```
+https://developer.mozilla.org/ko/docs/Web/Events
+https://www.w3schools.com/tags/ref_eventattributes.asp
+```
+
 # Vue-CLI 설치
 >Vue-CLi는 에반 유가 공식적으로 관리하는 커맨드라인 인터페이스 기반의 스캐폴딩(Scaffolding) 도구이다. Command Line Interface의 약자로 윈도우의 cmd나 맥의 터미털등의 프로그램에서 실행 가능하게 하는 프로그램을 말한다. Vue-CLI 3란 vue.js 개발을 위한 커맨드 라인 시스템으로 vue.js core에서 공식으로 제공하는 CLI이다. 애플리케이션 개발에 집중 할 수 있도록 프로젝트의 구성을 도와주는 역할을 한다.
 

@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>mouse modifier</title>
     <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        
-        #example {
-            height: 98vh;
-            min-height: 100%;
-            padding: 10px
-        }
+        html, body { margin: 0; padding: 0;}
+        #example { height: 98vh; min-height: 100%; padding: 10px; }
     </style>
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 </head>
-
 <body>
     <div id="example" v-on:contextmenu.prevent="ctxStop" @mouseup.left="leftMouse" @mouseup.right="rightMouse">
         <div>
@@ -51,5 +40,4 @@
         })
     </script>
 </body>
-
 </html>

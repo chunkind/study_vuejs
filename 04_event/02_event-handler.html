@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>event handler</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <style>
-        .layout1 {
-            margin: 30px 30px 30px 30px;
-        }
+        .layout1 { margin: 30px 30px 30px 30px; }
     </style>
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 </head>
-
 <body>
     <div id="example" class="container layout1">
         <p><input type="text" v-model="amount" class="form-control" /></p>
@@ -22,7 +18,6 @@
         </p>
         <h3>계좌 잔고 : {{balance}}</h3>
     </div>
-
     <script type="text/javascript">
         var vm = new Vue({
             el: "#example",
@@ -53,5 +48,4 @@
         })
     </script>
 </body>
-
 </html>

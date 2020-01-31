@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
-    <title>04-04</title>
+    <title>contextmenu-prevent</title>
     <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        
+        html, body { margin: 0; padding: 0; }
         #example {
-            height: 98vh;
-            min-height: 100%;
-            padding: 5px
+            height: 98vh; min-height: 100%; padding: 5px; 
         }
     </style>
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 </head>
-
 <body>
-
+    <!-- <div id="example" v-on:contextmenu="ctxStop"> -->
     <div id="example" v-on:contextmenu.prevent="ctxStop">
         <a href="https://facebook.com" @click="confirmFB">페이스북</a>
     </div>
@@ -30,7 +21,7 @@
             el: "#example",
             methods: {
                 ctxStop: function(e) {
-
+                    // e.preventDefault();
                 },
                 confirmFB: function(e) {
                     if (!confirm("페이스북으로 이동할까요?")) {
@@ -41,5 +32,4 @@
         })
     </script>
 </body>
-
 </html>
