@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>computed</title>
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 </head>
-
 <body>
     <div id="example">
         <input type="text" v-model="num" /><br /> 1부터 입력된 수까지의 합 : <span>{{sum}}</span>
@@ -28,5 +26,9 @@
         });
     </script>
 </body>
-
 </html>
+<!--
+vmSum.sum => sum 요소 실행
+vmSum.$data.sum => undefined
+vmSum.$options.computed.sum => sum 함수를 확인
+-->

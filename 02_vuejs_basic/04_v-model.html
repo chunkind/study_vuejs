@@ -10,16 +10,25 @@
     <div id="simple">
         <!-- v-model을 사용. -->
         <input type="text" v-model="name" placeholder="이름을 입력하세요." />
+        <input type="text" v-bind:value="name" placeholder="이름을 입력하세요." />
         <br/> 입력된 이름 :
         <h2 v-html="name"></h2>
+        <h2>{{name}}</h2>
+        <h2 v-text="name"></h2>
     </div>
     <script type="text/javascript">
-        var model = {
-            name: ''
-        }
+        // var model = {
+        //     name: '디폴트'
+        // }
+        // var simple = new Vue({
+        //     el: '#simple',
+        //     data: model
+        // });
         var simple = new Vue({
             el: '#simple',
-            data: model
+            data: {
+                name: '디폴트'
+            }
         });
     </script>
 </body>

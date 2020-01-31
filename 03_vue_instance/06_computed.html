@@ -14,10 +14,7 @@
     <script type="text/javascript">
         var vm = new Vue({
             el: "#example",
-            data: {
-                x: 0,
-                y: 0
-            },
+            data: { x: 0, y: 0 },
             beforeUpdate: function() {
                 console.log("before update")
                 console.log(this.x);
@@ -26,7 +23,7 @@
                 console.log("update")
                 console.log(this.x);
             },
-            //watch 대신 computed를 사용함.
+            //watch 대신 computed를 사용함. 이 예제의 경우 watch 보다 computed가 더 적합
             computed: {
                 sum: function() {
                     var result = Number(this.x) + Number(this.y);

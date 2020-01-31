@@ -9,7 +9,8 @@
 <body>
     <div id="simple">
         <!-- v-text를 사용. -->
-        <h2 v-text="message"></h2>
+        <h2 v-text="message"></h2> <!-- 디렉티브 사용 -->
+        <h3>{{message}}</h3> <!-- 콧수염 표현식(Mustache Expression) 또는 보간법(Interpolation) 을 사용 -->
     </div>
     <script type="text/javascript">
         var model = {

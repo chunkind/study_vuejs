@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>getter-setter</title>
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 </head>
-
 <body>
     <div id="example">
         금액 : <span>{{amount}}원</span>
@@ -44,5 +42,12 @@
         });
     </script>
 </body>
-
 </html>
+<!--
+아래 순서대로 콘솔창 입력후 확인
+
+vm.amount = "1,000,000,000" => set 메서드 실행해서 , 제거후 amt에 할당
+vm.amt => amt에 할당된 숫자 반환 ,안붙임
+vm.amount => get메서드 실행해서 ,붙이고 출력
+
+-->
