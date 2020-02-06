@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>search-contact-app</title>
@@ -11,22 +10,9 @@
 </head>
 <!-- contactlist-component 시작 -->
 <style>
-    #list {
-        width: 400px;
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    
-    #list td,
-    #list th {
-        border: 1px solid black;
-        text-align: center;
-    }
-    
-    #list>thead>tr {
-        color: yellow;
-        background-color: purple;
-    }
+    #list { width: 400px; border: 1px solid black; border-collapse: collapse; }
+    #list td, #list th { border: 1px solid black; text-align: center; }
+    #list>thead>tr { color: yellow; background-color: purple; }
 </style>
 <template id="listTemplate">
     <div>
@@ -66,9 +52,7 @@
         template: '#searchTemplate',
         props: ['placeholder'],
         data: function() {
-            return {
-                name: ''
-            };
+            return { name: '' };
         },
         methods: {
             keyupEvent: function(e) {
@@ -86,7 +70,8 @@
 <!-- searchcontact-component 시작 -->
 <template id="searchcontactTemplate">
     <div>
-        <search-component placeholder="두글자 이상 입력후 엔터!" v-on:search="searchEvent"></search-component>
+        <search-component placeholder="두글자 이상 입력후 엔터!" 
+            v-on:search="searchEvent"></search-component>
         <contactlist-component v-bind:contacts="contactlist"></contactlist-component>
         <div v-show="isProcessing === true">조회중</div>
     </div>
@@ -123,13 +108,11 @@
                         vm.contactlist = [];
                         vm.isProcessing = false;
                     })
-
             }, 300)
         }
     })
 </script>
 <!-- searchcontact-component 끝 -->
-
 <body>
     <div id="app">
         <search-contact-component></search-contact-component>
@@ -141,5 +124,4 @@
         el: "#app"
     })
 </script>
-
 </html>

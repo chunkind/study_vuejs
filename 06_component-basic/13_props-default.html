@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>props-default</title>
@@ -13,15 +12,9 @@
     Vue.component('list-component', {
         template: '#listTemplate',
         props: {
-            message: {
-                type: String,
-                default: '안녕하세요'
-            },
-            count: {
-                type: Number,
-                required: true
-            },
-            countries: {
+            message: { type: String, default: '안녕하세요' },
+            count: { type: Number, required: true },
+            countries: { 
                 type: Array,
                 default: function() {
                     return ['대한민국'];
@@ -30,13 +23,15 @@
         }
     })
 </script>
-
 <body>
     <div id="app">
         <ul>
-            <list-component message="Hello" v-bind:count="100" v-bind:countries="['미국', '영국', '호주']"></list-component>
-            <list-component message="씬짜오" :count="21" :countries="['베트남']"></list-component>
-            <list-component message="니하오마" :countries="['중국', '타이완']"></list-component>
+            <list-component message="Hello" v-bind:count="100" 
+                v-bind:countries="['미국', '영국', '호주']"></list-component>
+            <list-component message="씬짜오" :count="21" 
+                :countries="['베트남']"></list-component>
+            <list-component message="니하오마" 
+                :countries="['중국', '타이완']"></list-component>
             <list-component v-bind:count="1000"></list-component>
         </ul>
     </div>
@@ -47,5 +42,4 @@
         el: "#app"
     })
 </script>
-
 </html>

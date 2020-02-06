@@ -1,28 +1,14 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>props-list</title>
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 </head>
 <style>
-    #list {
-        width: 400px;
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    
-    #list td,
-    #list th {
-        border: 1px solid black;
-        text-align: center;
-    }
-    
-    #list>thead>tr {
-        color: yellow;
-        background-color: purple;
-    }
+    #list { width: 400px; border: 1px solid black; border-collapse: collapse; }
+    #list td, #list th { border: 1px solid black; text-align: center; }
+    #list>thead>tr { color: yellow; background-color: purple; }
 </style>
 <template id="listTemplate">
     <div>
@@ -49,7 +35,6 @@
         props: ['contacts']
     })
 </script>
-
 <body>
     <div id="app">
         <h1>예방 접종</h1>
@@ -77,5 +62,4 @@
         }
     })
 </script>
-
 </html>

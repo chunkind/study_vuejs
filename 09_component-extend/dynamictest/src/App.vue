@@ -17,11 +17,28 @@
     </nav>
   </div>
 
-  <div class="container">
+  <!-- no cashing : 시간정보가 메뉴를 클릭할때마다 바뀜 이것은 매번 실행 된다는 뜻. -->
+  <!-- <div class="container">
+    <component v-bind:is="currentView"></component>
+  </div> -->
+
+  <!-- cashing : 정적인 콘텐츠라면 매번 실행되는 것은 효율적이지 않다. 이런 경우 캐싱 -->
+  <!-- <div class="container">
     <keep-alive>
       <component v-bind:is="currentView"></component>
     </keep-alive>
+  </div> -->
+
+  <!-- 
+    특정 컴포넌트만 캐싱하거나 캐싱하고 싶지 않다면 include, exclude 특성으로 컴포넌트들을 콤마로 구분하여 나열하면 된다.
+    이때 지정된 이름이 있어야 하므로 각 컴포넌트마다 name 옵션을 부여 Home, About, Contact 컴포넌트에서 name 옵션 부여 
+  -->
+  <div class="container">
+    <keep-alive include="about,home">
+      <component v-bind:is="currentView"></component>
+    </keep-alive>
   </div>
+
 </div>
 </template>
 <script>
@@ -30,12 +47,12 @@ import About from './components/About.vue';
 import Contact from './components/Contact.vue';
 
 export default {
-  components : { Home, About, Contact },
-  data() {
+  components : {Home,About,Contact},
+  data(){
     return { currentView : 'home' }
   },
-  methods : {
-    changeMenu(view) {
+  methods:{
+    changeMenu(view){
       this.currentView = view;
     }
   }

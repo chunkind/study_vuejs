@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>event</title>
@@ -8,11 +7,7 @@
 </head>
 <!-- child Component 시작 -->
 <style>
-    .buttonstyle {
-        width: 120px;
-        height: 30px;
-        text-align: center;
-    }
+    .buttonstyle { width: 120px; height: 30px; text-align: center; }
 </style>
 <template id="childTemplate">
     <div>
@@ -47,9 +42,7 @@
         template: '#parent-template',
         props: ['buttons'],
         data: function() {
-            return {
-                msg: ""
-            };
+            return { msg: "" };
         },
         methods: {
             timeclickEvent: function(k, v) {
@@ -59,7 +52,6 @@
     })
 </script>
 <!-- parent Component 끝 -->
-
 <body>
     <div id="app">
         <parent-component :buttons="buttons"></parent-component>
@@ -70,18 +62,12 @@
     var vm = new Vue({
         el: "#app",
         data: {
-            buttons: [{
-                text: "Hello",
-                value: "영어"
-            }, {
-                text: "씬짜오",
-                value: "베트남어"
-            }, {
-                text: "니하오",
-                value: "중국어"
-            }]
+            buttons: [
+                { text: "Hello", value: "영어" },
+                { text: "씬짜오", value: "베트남어" },
+                { text: "니하오", value: "중국어" }
+            ]
         }
     })
 </script>
-
 </html>
