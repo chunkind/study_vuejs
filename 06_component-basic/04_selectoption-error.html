@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
-    <title>caution-solution</title>
+    <title>selectoptions-error</title>
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 </head>
 <script type="text/javascript">
@@ -11,13 +10,12 @@
         template: '<option>hello</option>'
     })
 </script>
-
 <body>
     <div id="app">
         <select>
-        <option is="option-component"></option>
-        <option is="option-component"></option>
-    </select>
+            <option-component></option-component>
+            <option-component></option-component>
+        </select>
     </div>
 </body>
 <script type="text/javascript">
@@ -26,5 +24,4 @@
         el: '#app'
     })
 </script>
-
 </html>

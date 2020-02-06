@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
-    <title>data-option</title>
+    <title>data-option-error</title>
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 </head>
 <template id='timeTemplate'>
@@ -15,9 +14,7 @@
 <script type="text/javascript">
     Vue.component('time-component', {
         template: '#timeTemplate',
-        data: {
-            nowTS: 0
-        },
+        data: { nowTS: 0 }, //data 옵션에 함수가 주어져야 한다. 정확히 표현하면 함수가 호출되어 리턴된 객체가 data 옵션에 주어져야 한다.
         methods: {
             timeClick: function(e) {
                 this.nowTS = (new Date()).getTime();
@@ -25,7 +22,6 @@
         }
     })
 </script>
-
 <body>
     <div id="app">
         <time-component></time-component>
@@ -38,5 +34,4 @@
         el: '#app'
     })
 </script>
-
 </html>
