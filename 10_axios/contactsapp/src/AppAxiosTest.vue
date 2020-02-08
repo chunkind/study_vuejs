@@ -8,10 +8,11 @@
                 <input type="text" v-model="name" placeholder="이름을 입력합니다" />
                 <input type="text" v-model="tel" placeholder="전화번호를 입력합니다" />
                 <input type="text" v-model="address" placeholder="주소를 입력합니다" />
-                <button @click="addContact">연락처 1건  추가</button>
+                <button @click="addContact">연락처 1건 추가</button>
             </div>
             <div  class="form-group">
-                <input type="text" v-model="no" /> <button @click="fetchContactOne">연락처 1건  조회</button>
+                <input type="text" v-model="no" />
+                <button @click="fetchContactOne">연락처 1건 조회</button>
             </div>
             <div  class="form-group">
                 <input type="text" v-model="no" />
@@ -73,7 +74,7 @@ export default {
         },
         addContact : function() {
             // axios.post('/api/contacts/', {
-            this.$refsaxios.post('/api/contacts/', {
+            this.$axios.post('/api/contacts/', {
                 name : this.name, tel : this.tel, address : this.address
             })
             .then((response) => {
