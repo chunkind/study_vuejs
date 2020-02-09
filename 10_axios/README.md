@@ -87,3 +87,18 @@ Vue.prototype.$axios = axios;
 
 # axios 사용 시 주의 사항
 axios를 사용하면서 then()를 처리할 때는 ECMAScript6의 화살표 함수(Arrow Function)를 사용할 것을 권장한다. 데이터를 수신한 후에 Vue 인스턴스 내부의 데이터를 변경해야 하는 경우가 많은데, 데이터 옵션을 엑세스하기 위해서는 this 객체가 Vue인스턴스를 참조할 수 있어야 한다. then() 내부에서 화살표 함수를 사용하지 않으면 this.가 Vue인스턴스를 참조하지 않기 때문에 밖에서 별도의 변수에 this를 할당한 후에 클로저(Closure) 방식으로 접근해야 하는 불편함이 발생한다. 이때 then() 내부의 코드를 화살표 함수로 작성하면 바깥 영역의 this를 전달받아 사용할 수 있다.
+
+# paging 처리 플러그인 vuejs-paginate
+yarn add vuejs-paginate@1.9.3 bootstrap@3.3.7
+또는
+npm install --save vuejs-paginate@1.9.3 bootstrap@3.3.7
+
+vuejs-paginate 패키지는 부트스트랩 css 파일을 필요로 하므로 src/main.js에서 부트스트랩 css 파일을 import해야 한다.
+vuejs-paginate 참고 : https://github.com/lokyoung/vuejs-paginate 참조
+
+IE에서는 기본적으로 Promise 객체를 지원하지 않는다. axios는 Promise 기반이다. IE에서 Promise를 사용할 수 있도록 하려면 추가적인 별도의 polyfill 요소를 다운로드하고 참조해야 한다.
+
+yarn add es6-promise
+또는
+npm install --save es6-promise
+

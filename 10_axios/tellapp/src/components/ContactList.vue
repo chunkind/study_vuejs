@@ -15,7 +15,7 @@
                         <td>{{contact.name}}</td>
                         <td>{{contact.tel}}</td>
                         <td>{{contact.address}}</td>
-                        <td><img class="thumbnail" :src="contact.photo" @click="editPhoto(contant.no)" /></td>
+                        <td><img class="thumbnail" :src="contact.photo" @click="editPhoto(contact.no)" /></td>
                         <td>
                             <button class="btn btn-primary" @click="editContact(contact.no)">편집</button>
                             <button class="btn btn-primary" @click="deleteContact(contact.no)">삭제</button>
@@ -57,7 +57,7 @@ export default{
     },
     methods : {
         pageChanged : function(page){
-            eventBus.$emit("addContactFrom", page);
+            eventBus.$emit("pageChanged", page);
         },
         addContact : function(){
             eventBus.$emit("addContactForm");

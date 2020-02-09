@@ -113,3 +113,10 @@ B. 나머지 두 라이브러리는 강력한 인지도를 바탕으로 하는 �
 카멜 : schoolMember
 파스칼 : SchoolMember
 캐밥 : school-member
+
+# vue로 console사용
+"eslintConfig":{
+    "rules":{
+        "no-console" : "off"
+    }
+}
