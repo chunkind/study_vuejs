@@ -8,6 +8,7 @@
     <contactList :contactlist="contactlist"></contactList>
   </div>
 </template>
+
 <script>
 import ContactList from './components/ContactList';
 import AddContact from './components/AddContact';
@@ -161,6 +162,7 @@ export default {
   }
 }
 </script>
+
 <style scoped>
 @import url("https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.css");
 #container {

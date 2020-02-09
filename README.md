@@ -120,3 +120,25 @@ B. 나머지 두 라이브러리는 강력한 인지도를 바탕으로 하는 �
         "no-console" : "off"
     }
 }
+
+# vue에서 돔객체 접근 할수 있는 $refs 객체
+>뷰에서는 $refs 속성을 이용해 DOM에 접근할 수 있다. 템플릿 안의 엘리먼트에 ref 속성을 추가함으로서, 뷰 인스턴스에 이 엘리먼트에 대한 정보를 줄 수 있다. 또한, 우리는 이 엘리먼트에 접근할 수 있다. ref 속성은 HTML의 표준속성이 아니며, 심지어 DOM의 일부가 아니기도 한다. 그래서, HTML 렌더링 후, 우리는 콘솔창에서 ref 속성을 찾을 수 없다. $refs 객체의 키는 엘리먼트의 ref속성에 정의한 값이 되며, 값은 해당 DOM 엘리먼트이다. 우리가 엘리먼트에 접근할 수 있다는 것은 곧, 엘리먼트를 변경할 수 있다는 것과 같다. 물론, 우리는 순수 자바스크립트의 querySelector을 이용해 DOM 엘리먼트에 접근할 수 있다. 하지만, ref 속성은 좀 더 깔끔하며 뷰에게 좋은 방식이다. 또한 ID나 CLASS 속성에 의존하지 않아도 되므로 좀 더 안전하다. 뷰의 가장 중요한 목적 중 하나는 개발자가 DOM을 다루지 않게하는 것이다. 그러므로, 되도록 ref를 사용하는 것을 피하는 것이 좋다. 
+
+```
+<div id="app">
+	<h1>{{ message }}</h1>
+	<button ref="myButton" @click="clickedButton">Click Me!</button>
+</div>
+var vm = new Vue({
+	el: '#app',
+	data: {
+		message: 'Hello World!'
+	},
+	methods: {
+		clickedButton: function() {
+			console.log(this.$refs);
+			this.$refs.myButton.innerText = this.message;
+		}
+	}
+});
+```

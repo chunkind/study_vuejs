@@ -8,25 +8,20 @@
         </div>
         <div class="form-group">
             <label>이름</label>
-            <input type="text" name="name" class="long" v-model="contact.name" 
-                ref="name" placeholder="이름을 입력하세요" />
+            <input type="text" name="name" class="long" v-model="contact.name" ref="name" placeholder="이름을 입력하세요" />
         </div>
         <div class="form-group">
             <label>전화번호</label>
-            <input type="text" name="tel" class="long" v-model="contact.tel" 
-                placeholder="전화번호를 입력하세요" />
+            <input type="text" name="tel" class="long" v-model="contact.tel" placeholder="전화번호를 입력하세요" />
         </div>
         <div class="form-group">
             <label>주 소</label>
-            <input type="text" name="address" class="long" v-model="contact.address" 
-                placeholder="주소를 입력하세요" />
+            <input type="text" name="address" class="long" v-model="contact.address" placeholder="주소를 입력하세요" />
         </div>
         <div class="form-group">
             <div>&nbsp;</div>
-            <input type="button" class="btn btn-primary" 
-                v-bind:value="btnText" @click="submitEvent()" />
-            <input type="button" class="btn btn-primary" 
-                value="취 소" @click="cancelEvent()" />
+            <input type="button" class="btn btn-primary" v-bind:value="btnText" @click="submitEvent()" />
+            <input type="button" class="btn btn-primary" value="취 소" @click="cancelEvent()" />
         </div>
     </div>
 </div>
