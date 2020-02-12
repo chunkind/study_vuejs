@@ -11,7 +11,7 @@ import CountryList from './components/CountryList';
 
 export default {
   name : 'app',
-  components:{RegionButtons, CountryList}
+  components : { RegionButtons, CountryList }
 }
 </script>
 <style>

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import Constant from '../constant';
+
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
@@ -9,7 +10,7 @@ const store = new Vuex.Store({
             { todo: "영화보기", done: false },
             { todo: "주말 산책", done: true },
             { todo: "ES6 학습", done: false },
-            { todo: "잠실 야구장", done: false }
+            { todo: "잠실 야구장", done: false },
         ]
     },
     mutations: {
