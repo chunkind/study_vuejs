@@ -46,8 +46,8 @@ export default {
             var arr = this.contacts.filter(function(item) {
                 return item.no == no;
             });
-            if (arr.length == 1)   return arr[0];
-            else   return {};
+            if (arr.length == 1) return arr[0];
+            else return {};
         }
     }
 }

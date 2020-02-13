@@ -21,9 +21,11 @@ import Home from './components/Home.vue';
 import About from './components/About.vue';
 import Contacts from './components/Contacts.vue';
 import ContactByNo from './components/ContactByNo.vue';
+import NotFound from './components/NotFound.vue';
 import VueRouter from 'vue-router';
 
 const router = new VueRouter({
+  mode : 'history',
   routes : [
     { path:'/', component: Home },
     { path:'/home', name:'home', component: Home },
@@ -42,7 +44,8 @@ const router = new VueRouter({
           }
         },
       ]
-    }
+    },
+    { path : '*', component: NotFound}
   ]
 })
 

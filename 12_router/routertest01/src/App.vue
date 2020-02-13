@@ -10,12 +10,12 @@
       </ul>
     </nav>
   </div>
-
   <div class="container">
     <router-view></router-view>
   </div>
 </div>
 </template>
+
 <script>
 import Home from './components/Home.vue';
 import About from './components/About.vue';
@@ -36,6 +36,7 @@ export default {
   router
 }
 </script>
+
 <style>
 @import url("https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.css");
 .header { background-color:aqua; padding: 10px 0px 0px 0px; }

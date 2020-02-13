@@ -8,6 +8,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import contactlist from '../ContactList';
 
@@ -20,6 +21,7 @@ export default {
   }
 }
 </script>
+
 <style>
 .wrapper { background-color:#fff; clear:both; display:table; }
 .box { float:left; background-color:aqua; border-radius:5px;
