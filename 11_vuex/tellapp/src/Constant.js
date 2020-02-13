@@ -2,7 +2,7 @@ export default {
     // 변이와 액션 모두에서 사용
     ADD_CONTACT_FORM : "addContactForm",    //입력폼 나타내기
     CANCEL_FORM : "cacelForm",              //입력, 수정폼 닫기
-    EDIT_CONTACT_FROM : "editContactForm",  //수정폼 나타내기
+    EDIT_CONTACT_FORM : "editContactForm",  //수정폼 나타내기
     EDIT_PHOTO_FORM : "editPhotoForm",      //사진 편집폼 나타내기
     FETCH_CONTACTS : "fetchContacts",       //연락처 조회
 

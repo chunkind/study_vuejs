@@ -1,8 +1,6 @@
 <template>
     <p>
-        이름 : <input type="text" v-model.trim="name"
-                placeholder="두글자 이상 입력후 엔터!"
-                @keyup.enter="keyupEvent" />
+        이름 : <input type="text" v-model.trim="name" placeholder="두글자 이상 입력후 엔터!" @keyup.enter="keyupEvent" />
     </p>
 </template>
 <script type="text/javascript">

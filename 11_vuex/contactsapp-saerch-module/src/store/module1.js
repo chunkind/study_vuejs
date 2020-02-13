@@ -14,6 +14,7 @@ export default {
         [Constant.SEARCH_CONTACT] : (store, payload)=> {
             axios.get(Constant.BASE_URL + payload.name)
             .then((response)=> {
+                alert(response)
                 store.commit(Constant.SEARCH_CONTACT, { contacts: response.data })
                 if (response.data.length > 0)
                     store.dispatch(Constant.ADD_KEYWORD, payload);

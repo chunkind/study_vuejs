@@ -14,6 +14,9 @@ https://developer.mozilla.org/ko/docs/Web/Events
 https://www.w3schools.com/tags/ref_eventattributes.asp
 ```
 
+# async - await
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/async_function
+
 # live-server 설치
 Vue.js devtools는 파일 URL로 실행해도 사용할 수 있다. 하지만 코드를 변경하고 재실행하려면 매번 새로 고침을 눌러야 하므로 번거롭다. 이럴 때 live-server라는 도구를 사용하면 핫리로딩(Hot Reloading)이라는 기능을 통해 코드가 변경되어 저장되면 브라우저 화면에 즉시 갱신되도록 할 수 있다. live-server를 설치하기 위해서 다음의 명령어를 콘솔에서 실행. 한번만 설치하면 어디서나 사용할 수 있도록 글로벌 옵션(-g)를 부여하여 설치 하자.
 

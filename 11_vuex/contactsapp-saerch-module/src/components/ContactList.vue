@@ -1,8 +1,3 @@
-<style scoped>
-#list  { width: 600px; border:1px solid black; border-collapse:collapse; }
-#list td, #list th { border:1px solid black;  text-align:center; }
-#list > thead > tr { color:yellow; background-color: purple; }
-</style>
 <template>
     <div>
     <table id="list">
@@ -25,6 +20,7 @@
     </table>
     </div>
 </template>
+
 <script type="text/javascript">
 import { mapState } from  'vuex';
 export default {
@@ -32,3 +28,9 @@ export default {
     computed : mapState([ 'contacts' ])
 }
 </script>
+
+<style scoped>
+#list  { width: 600px; border:1px solid black; border-collapse:collapse; }
+#list td, #list th { border:1px solid black;  text-align:center; }
+#list > thead > tr { color:yellow; background-color: purple; }
+</style>
