@@ -145,3 +145,9 @@ var vm = new Vue({
 	}
 });
 ```
+
+# 플러그인 설치
+## 1)paginate
+yarn add vuejs-paginate@1.9.3 bootstrap@3.3.7
+
+## 2)
