@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>트랜지션 기본</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .box{
+                background: blue;
+                width: 50px; height: 50px;
+            }
+            @keyframes shake-box{
+                0% {transform: translateX(-20px); background-color: blue;}
+                50% {transform: translateX(10px); background-color: yellow;}
+                100% {transform: translateX(-20px); background-color: blue;}
+            }
+            .box:hover{
+                animation: shake-box 0.2s infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>
+<!--
+    @keyframes 속성에는 애니메이션 진행률에 따라 보여줄 스타일 속성 값을 지정한다.
+    0~50%, 50~100% 구간 사이는 속성을 서서히 변경시켜서 구간별 트랜지션이 일어난다.
+    shake-box 키프레임을 무한 적용하여 좌우로 요소를 흔드는 애니메이션 효과를 일이킨다.
+-->
