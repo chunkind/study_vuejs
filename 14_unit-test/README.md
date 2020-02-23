@@ -7,6 +7,13 @@ vue add @vue/unit-jest
 [Chai + Mocha]
 vue add @vue/unit-mocha
 
-# Mocha 플러그인을 활용한 테스트
+# Chai
+메처 함수 기능은 Chai라는 패키지가 제공한다. Chai에 대한 자세한 내용은 http://chaijs.com 참조.
 
-# Jest를 이용한 테스트
+# shallowMount 함수와 mount 함수
+shallowMount, mount 함수는 @vue/test-utils 패키지에서 지원하는 함수이다. 두 함수 모두 마운트되고 렌더링된 Vue 컴포넌트를 포함하는 Wrapper 객체를 생성하여 리턴한다. mount()는 전체 Vue 컴포넌트 트리, 즉 자식 컴포넌트까지 포함하여 모두 렌더링하지만 shallowMount()는 자식 컴포넌트를 렌더링하지 않고 직접 마운트된 컴포넌트만 렌더링한다는 차이점이 있다. 컴포넌트를 테스트할 때 자식 컴포넌트 트리가 아닌 현행 컴포넌트만 테스트해야 할 경우가 있으며 이런 경우에 shallowMount() 함수를 사용한다.
+
+# jest 정보
+http://jestjs.io/docs/en/expect
+
+test method관련 전역 API에 대한 자세한 내용은 http://jestjs.io/docs/en/api.html 
